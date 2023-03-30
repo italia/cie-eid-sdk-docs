@@ -1,18 +1,13 @@
-==================================
-Documento di esempio - Docs Italia
-==================================
+################################################################  
+Manuale Tecnico per gli erogatori di servizi pubblici e privati
+################################################################
 
-.. raw:: latex 
+.. highlights::
+   CieID SDK
 
-   \makeatletter\@openrightfalse
-	\chapter{Introduzione}
-
-Descrizione scopo del documento.
-
+  
 .. toctree::
-   :maxdepth: 3
-   :caption: Indice dei contenuti
-   :numbered:
-
-   introduzione.rst  
-   
+  :maxdepth: 3
+  :numbered:
+  
+  cieid-sdk.rst
