@@ -72,7 +72,7 @@ Inoltre, è necessario che i seguenti requisiti siano soddisfatti:
 
 -  utilizzo di un dispositivo mobile dotato di tecnologia NFC;
 
--  disponibilità di una
+-  disponibilità di una connessione internet
 
 Configurazione
 ~~~~~~~~~~~~~~~~~~~~~~
