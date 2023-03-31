@@ -1,7 +1,7 @@
 .. _cieid-sdk:
 
 CieID SDK
-===============
+=========
 
 I Service Provider che intendono erogare i propri servizi tramite
 proprie app hanno la possibilità di integrare lo schema di
@@ -15,18 +15,21 @@ dell’utente, reindirizza la richiesta all’App CieID che prende in carico
 la comunicazione e l’autenticazione con la CIE.
 
 .. figure:: media/image1.png
+    :alt: Autenticazione livello 1- Flusso con reindirizzamento
     :name: aut-livello1
     :align: center
 
     Autenticazione di livello 1 - Flusso con reindirizzamento
 
 .. figure:: media/image2.png
+    :alt: Autenticazione livello 2 - Flusso con reindirizzamento
     :name: aut-livello2
     :align: center
 
     Autenticazione di livello 2 - Flusso con reindirizzamento
 
 .. figure:: media/image3.png
+    :alt: Autenticazione livello 3 - Flusso con reindirizzamento
     :name: aut-livello3
     :align: center
 
@@ -40,6 +43,7 @@ CIE mediante una libreria SDK, disponibile sia per sistemi operativi
 Android che iOS.
 
 .. figure:: media/image4.png
+    :alt: Autenticazione livello 3 - flusso interno
     :name: aut-livello3-interno
     :align: center
 
@@ -49,7 +53,7 @@ Android che iOS.
 .. _sec-sdk-android:
 
 SDK Android
-------------------
+-----------
 
 La versione del SDK per Android, \**CieID-android-sdk**, è disponibile
 al link
@@ -60,7 +64,7 @@ Kotlin, e integra una app di esempio che descrive le diverse modalitá di
 integrazione dello schema «Entra con CIE»:
 
 Requisiti di integrazione
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’utilizzo dell’SDK presuppone che il Service Provider sia correttamente
 federato con l’Identity Provider e che abbia implementato almeno uno tra
@@ -75,7 +79,7 @@ Inoltre, è necessario che i seguenti requisiti siano soddisfatti:
 -  disponibilità di una connessione internet
 
 Configurazione
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Dell’IdP sono messi a disposizione degli erogatori di servizi due
 ambienti: uno di **preproduzione**, per gli sviluppi applicativi e i
@@ -137,7 +141,7 @@ seguito:
 
 
 Modalità di integrazione
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’SDK fornisce una app di esempio, con 2 activity, una per flusso, per
 facilitare al Service Provider l’integrazione all’interno della propria
@@ -252,7 +256,7 @@ implementando i seguenti metodi:
 .. _sec-sdk-ios:
 
 SDK iOS
----------------
+-------
 
 CieID-iOS-sdk è un SDK per smartphone iOS sviluppato in Swift che
 include le funzionalità di autenticazione di
@@ -262,7 +266,7 @@ applicazioni terze iOS possono integrare nella propria app
 l’autenticazione mediante la Carta d’identità elettronica.
 
 Requisiti tecnici
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 CieID-iOS-sdk richiede versione iOS 13.0 o successive, inoltre è
 necessario uno smartphone iOS con tecnologia NFC (iPhone 7 o successivo,
@@ -271,14 +275,14 @@ non è compatibile con iPhone SE di prima generazione - mod 2016).
 .. _requisiti-di-integrazione-1:
 
 Requisiti di integrazione
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’utilizzo dell’SDK presuppone che il Service Provider sia correttamente
 federato con l’Identity Provider e che abbia implementato almeno uno tra
 i protocolli previsti dallo schema di autenticazione «Entra con CIE».
 
 Come si usa
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 Il kit integra prevede il solo flusso di autenticazione con
 reindirizzamento di seguito descritto. L’integrazione richiede pochi
@@ -299,7 +303,7 @@ semplici passaggi:
 -  Gestione dei delegati
 
 Flusso con reindirizzamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il flusso di autenticazione con reindirizzamento permette ad un Service
 Provider accreditato di integrare l’autenticazio- ne Entra con CIE nella
@@ -309,17 +313,17 @@ CieID installata sul proprio smartphone in **versione 1.2.1 o
 successiva**.
 
 Flusso interno
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Non disponibile.
 
 Importazione
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Trascinare il folder CieIDsdk all’interno del progetto xCode
 
 Configurazione URL Scheme
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel flusso di autenticazione con reindirizzamento l’applicazione CieID
 avrà bisogno aprire l’app chiamante per potergli notificare l’avvenuta
@@ -376,7 +380,7 @@ tale logica:
 
 
 Configurazione Service Provider URL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Entrambi i flussi vengono avviati tramite l’utilizzo di una WebView, per
 questo motivo è necessario caricare la URL dell’ambiente di produzione
@@ -391,7 +395,7 @@ chiamato **SP_URL** di tipo **String**, come mostrato nell’esempio:
 
 
 Importazione del pulsante Entra con CIE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aggiungere nello storyboard di progetto un oggetto di tipo **UIButton**
 ed inserire nella voce **Class** del menù **Iden- tity inspector** la
@@ -400,7 +404,7 @@ automaticamente renderizzato con il pulsante ufficiale “\ *Entra con
 CIE*\ ”.
 
 Eseguire l’autenticazione
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Di seguito un esempio di gestione dell’evento **TouchUpInside** per
 eseguire il codice necessario per inizializzare e presentare la WebView
@@ -440,7 +444,7 @@ necessario posticipare la chiamata di questo delegato in base alla
 logica di autenticazione del Service Provider.
 
 Gestione eventi
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Il protocollo impone la gestione dei seguenti eventi mediante delegati
 
@@ -470,7 +474,7 @@ Il protocollo impone la gestione dei seguenti eventi mediante delegati
 .. _sec-licenza:
 
 Licenza
--------------
+-------
 
 Il codice sorgente è rilasciato sotto licenza BSD (codice SPDX:
 BSD-3-Clause).
