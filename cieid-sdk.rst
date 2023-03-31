@@ -16,6 +16,7 @@ la comunicazione e l’autenticazione con la CIE.
 
 .. figure:: media/image1.png
     :alt: Autenticazione livello 1- Flusso con reindirizzamento
+    :width: 15 cm
     :name: aut-livello1
     :align: center
 
@@ -23,6 +24,7 @@ la comunicazione e l’autenticazione con la CIE.
 
 .. figure:: media/image2.png
     :alt: Autenticazione livello 2 - Flusso con reindirizzamento
+    :width: 15 cm
     :name: aut-livello2
     :align: center
 
@@ -30,6 +32,7 @@ la comunicazione e l’autenticazione con la CIE.
 
 .. figure:: media/image3.png
     :alt: Autenticazione livello 3 - Flusso con reindirizzamento
+    :width: 15 cm
     :name: aut-livello3
     :align: center
 
@@ -44,6 +47,7 @@ Android che iOS.
 
 .. figure:: media/image4.png
     :alt: Autenticazione livello 3 - flusso interno
+    :width: 15 cm
     :name: aut-livello3-interno
     :align: center
 
