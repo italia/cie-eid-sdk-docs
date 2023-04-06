@@ -1,7 +1,6 @@
-.. _cieid-sdk:
-
-CieID SDK
-=========
+==============
+SDK App Mobile 
+==============
 
 I Service Provider che intendono erogare i propri servizi tramite
 proprie app hanno la possibilità di integrare lo schema di
@@ -57,7 +56,7 @@ Android che iOS.
 .. _sec-sdk-android:
 
 SDK Android
------------
+===========
 
 La versione del SDK per Android, \**CieID-android-sdk**, è disponibile
 al link
@@ -260,7 +259,7 @@ implementando i seguenti metodi:
 .. _sec-sdk-ios:
 
 SDK iOS
--------
+=======
 
 CieID-iOS-sdk è un SDK per smartphone iOS sviluppato in Swift che
 include le funzionalità di autenticazione di
@@ -478,7 +477,7 @@ Il protocollo impone la gestione dei seguenti eventi mediante delegati
 .. _sec-licenza:
 
 Licenza
--------
+=======
 
 Il codice sorgente è rilasciato sotto licenza BSD (codice SPDX:
 BSD-3-Clause).
