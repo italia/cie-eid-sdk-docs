@@ -134,13 +134,13 @@ seguito:
 	*//AMBIENTI:*
 	*//Ambiente di produzione*
 	*//buildConfigField "String", "BASE_URL_IDP",
-	"\"https://idserver.servizicie.interno.*
-	*˓→gov.it/idp/\""*
+	"\"https://idserver.servizicie.interno.gov.it/idp/"\"*
+
 
 	*//Ambiente di collaudo*
-	buildConfigField "String", "BASE_URL_IDP",
-	"\"https://preproduzione.idserver.
-	*˓→*\ servizicie.interno.gov.it/idp/\""
+	*//buildConfigField "String", "BASE_URL_IDP",
+	"\"https://preproduzione.idserver.servizicie.interno.gov.it/idp/"\"*
+
 
 
 Modalità di integrazione
@@ -365,9 +365,8 @@ tale logica:
 		**if let** httpsRange = urlString.range(of: "https://"){
 		
 		*//Rimozione del prefisso dell'URL SCHEME*
-		**let** startPos = urlString.distance(from: urlString.startIndex, to: httpsRange.
+		**let** startPos = urlString.distance(from: urlString.startIndex, to: httpsRange.lowerBound)
 
-    *˓→*\ lowerBound)
 
         urlString = String(urlString.dropFirst(startPos))
 
@@ -376,8 +375,7 @@ tale logica:
 		**let** response : [String:String] = ["payload": urlString]
 		**let** NOTIFICATION_NAME : String = "RETURN_FROM_CIEID"
 
-		NotificationCenter.\ **default**.post(name:         Notification.Name(NOTIFICATION\_
-	*˓→*\ NAME), object: **nil**, userInfo: response)
+		NotificationCenter.\ **default**.post(name:         Notification.Name(NOTIFICATION\_NAME), object: **nil**, userInfo: response)
 			}
 	}
 
