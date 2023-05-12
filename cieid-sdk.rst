@@ -1,17 +1,17 @@
 ==============
-SDK App Mobile 
+SDK App Mobile
 ==============
 
-I Service Provider che intendono erogare i propri servizi tramite
-proprie app hanno la possibilità di integrare lo schema di
+I Service Provider che che offrono parte o tutti i loro servizi tramite
+app hanno la possibilità di integrare lo schema di
 autenticazione «Entra con CIE» mediante l’SDK CieID. I flussi di
 integrazione disponibili sono due:
 
 **Flusso con reindirizzamento**
 
 L’App del Service Provider, all’atto della richiesta di autenticazione
-dell’utente, reindirizza la richiesta all’App CieID che prende in carico
-la comunicazione e l’autenticazione con la CIE.
+dell’utente, reindirizza la richiesta all’App CieID che cura i dettagli
+la comunicazione e l’autenticazione con la CIE, mascherando tali aspetti all'applicazione chiamante.
 
 .. figure:: media/image1.png
     :alt: Autenticazione livello 1- Flusso con reindirizzamento
@@ -59,9 +59,8 @@ SDK Android
 ===========
 
 La versione del SDK per Android, \**CieID-android-sdk**, è disponibile
-al link
-`https://github.com/italia/ <https://github.com/italia/cieid-android-sdk>`__
-`cieid-android-sdk <https://github.com/italia/cieid-android-sdk>`__. É
+a
+`questo link <https://github.com/italia/cieid-android-sdk>`__. É
 costituita da una libreria software, realizzata in codice nativo Android
 Kotlin, e integra una app di esempio che descrive le diverse modalitá di
 integrazione dello schema «Entra con CIE»:
@@ -99,7 +98,7 @@ necessario caricare la URL del Service Provider che integra il pulsante
 
 	*//inserire url service provider*
 	webView.loadUrl("URL del Service Provider")
-    
+
 
 **Flusso con reindirizzamento**
 
@@ -120,7 +119,7 @@ mostrato di seguito.
 
 Per quanto riguarda il *flusso integrato*, invece, la fase di
 autenticazione viene gestita dalla libreria software. In questo caso é
-necessario integrare il modulo «CieIDSdk»:
+necessario integrare il modulo «CieIDSdk».
 
 L’SDK utilizza *Gradle* con strumento di build automatico. Per
 configurare correttamente il flusso, é necessario selezionare l’ambiente
@@ -196,7 +195,7 @@ nella WebView precedente, come mostrato nell’esempio seguente:
 		val url = data?.getStringExtra(URL)
 
 		webView.loadUrl(url)
-		
+
 	}
 
 
@@ -261,7 +260,7 @@ implementando i seguenti metodi:
 SDK iOS
 =======
 
-CieID-iOS-sdk è un SDK per smartphone iOS sviluppato in Swift che
+CieID-iOS-sdk è un SDK per smartphone iOS sviluppato in linguaggio "Swift" che
 include le funzionalità di autenticazione di
 
 «Entra con CIE». Utilizzando questo kit, gli sviluppatori di
@@ -287,7 +286,7 @@ i protocolli previsti dallo schema di autenticazione «Entra con CIE».
 Come si usa
 ~~~~~~~~~~~
 
-Il kit integra prevede il solo flusso di autenticazione con
+Il kit prevede il solo flusso di autenticazione con
 reindirizzamento di seguito descritto. L’integrazione richiede pochi
 semplici passaggi:
 
@@ -309,7 +308,7 @@ Flusso con reindirizzamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il flusso di autenticazione con reindirizzamento permette ad un Service
-Provider accreditato di integrare l’autenticazio- ne Entra con CIE nella
+Provider accreditato di integrare l’autenticazione Entra con CIE nella
 propria app iOS, demandando le operazioni di autenticazione all’app
 CieID. Questo flusso di autenticazione richiede che l’utente abbia l’app
 CieID installata sul proprio smartphone in **versione 1.2.1 o
@@ -363,7 +362,7 @@ tale logica:
 
 		**var** urlString : String = String(url.absoluteString)
 		**if let** httpsRange = urlString.range(of: "https://"){
-		
+
 		*//Rimozione del prefisso dell'URL SCHEME*
 		**let** startPos = urlString.distance(from: urlString.startIndex, to: httpsRange.lowerBound)
 
@@ -371,7 +370,7 @@ tale logica:
         urlString = String(urlString.dropFirst(startPos))
 
 		*//Passaggio dell'URL alla WebView*
-		
+
 		**let** response : [String:String] = ["payload": urlString]
 		**let** NOTIFICATION_NAME : String = "RETURN_FROM_CIEID"
 
@@ -451,7 +450,7 @@ Il protocollo impone la gestione dei seguenti eventi mediante delegati
 
 ..  code-block:: java
 
-	**func** CieIDAuthenticationClosedWithSuccess() { 
+	**func** CieIDAuthenticationClosedWithSuccess() {
 				print("Authentication closed with SUCCESS")
 
 	}
@@ -459,7 +458,7 @@ Il protocollo impone la gestione dei seguenti eventi mediante delegati
 
 ..  code-block:: java
 
-	**func** CieIDAuthenticationCanceled() { 
+	**func** CieIDAuthenticationCanceled() {
 				print("L'utente ha annullato l'operazione")
 
 	}
