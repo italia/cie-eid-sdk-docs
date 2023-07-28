@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_project_name = "Manuale Tecnico per gli erogatori di servizi pubblici e privati: CieID SDK"
+settings_project_name = "Guida all'implementazione del SDK Mobile CIE id"
 settings_copyright_copyleft = 'Istituto Poligrafico e Zecca dello stato'
 settings_editor_name = 'Istituto Poligrafico e Zecca dello stato'
 settings_doc_version = 'version: latest'
 settings_doc_release = 'version: latest'
-settings_basename = 'cie-oidc-test-plan-docs'
-settings_file_name = 'cie-oidc-test-plan-docs'
+settings_basename = 'cie-eid-sdk-docs'
+settings_file_name = 'cie-eid-sdk-docs'
 
 # -- No need to change below here
 

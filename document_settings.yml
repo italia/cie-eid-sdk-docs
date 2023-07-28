@@ -1,7 +1,10 @@
---- 
-document: 
-  name: "Documento di prova"
-  short_name: doc-proca
-  description: "Descrizione"
+document:
+  name: Guida all'implementazione del SDK Mobile CIE id
+  description: |
+    Guida operativa all'implementazione del SDK Mobile CIE id che consente l'integrazione dello schema di autenticazione "Entra con CIE" all'interno di Applicazioni mobile dei fornitori di servizi abilitati. 
   tags:
-    - Docs Italia
+    - standard 
+    - interoperabilità
+    - cie
+    - sdk
+  
