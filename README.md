@@ -1,4 +1,4 @@
-# Regole Tecniche CIE eID sdk
+# Regole Tecniche CIE eID SDK
 
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 [![Docs Italia](https://docs.italia.it/media/static/projects/badges/passing.svg)](https://docs.italia.it/italia/cie-eid-sdk-docs/it/master/index.html)
